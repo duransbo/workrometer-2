@@ -7,7 +7,6 @@ const DATA_CACHE_VERSION = "0.0.01";
 const DATA_CACHE_NAME = `data-workrometer-${CACHE_VERSION}`;
 
 const CACHE_FILES = [
-	'/',
 	'index.html',
 	'reset.css',
 	'global.css',
