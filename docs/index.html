@@ -25,5 +25,15 @@
 
 		<script defer src='build/bundle.js'></script>
 	</head>
-	<body></body>
+	<body>
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('workrometer-2/sw.js').then(reg => {
+						console.log('Service worker registered.', reg);
+					});
+				});
+			}
+		</script>
+	</body>
 </html>
