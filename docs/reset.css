@@ -1,0 +1,138 @@
+/* STRUCTURE TAG */
+body,
+nav,
+figure,
+form,
+fieldset,
+ul[class],
+ol[class],
+li,
+div,
+header,
+footer,
+main,
+section,
+article,
+aside {
+	width: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	border-width: 0;
+	padding: 0;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+html {
+	overflow-y: scroll;
+	font-family: "Trebuchet MS";
+	font-size: 15px;
+	color: #111;
+}
+main {
+	display: block;
+}
+
+
+
+
+/* TEXT TAG */
+th,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+	font-weight: bold;
+}
+h1 {
+	font-size: 3.0rem;
+}
+h2 {
+	font-size: 2.8rem;
+}
+h3,
+caption,
+legend {
+	font-size: 2.6rem;
+}
+h4 {
+	font-size: 2.4rem;
+}
+h5 {
+	font-size: 2.2rem;
+}
+h6 {
+	font-size: 2.0rem;
+}
+dfn {
+	font-style: normal;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+
+
+/* FORM TAG */
+input,
+button,
+textarea,
+select {
+	outline: none;
+	font: inherit;
+	box-sizing: border-box;
+}
+input[type=button],
+input[type=file],
+input[type=reset],
+input[type=submit],
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+}
+input[type=color],
+input[type=checkbox],
+input[type=radio],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=text],
+input[type=time],
+input[type=url],
+select {
+	height: 20px;
+}
+input[type=color],
+input[type=checkbox],
+input[type=radio]{
+	width: 20px;
+	cursor: pointer;
+	outline: none;
+}
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=text],
+input[type=time],
+input[type=url],
+select,
+textarea {
+	width: 250px;
+}
+textarea {
+	height: 100px;
+}
