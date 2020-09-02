@@ -33,7 +33,7 @@
 
 		const storage = JSON.parse(localStorage.getItem('workrometer'));
 
-		if (storage.workStarted) {
+		if (storage && storage.workStarted) {
 			set(new Work(storage.workStarted.text, storage.workStarted.intervals.map(interval => {
 				return new Interval(new Date(interval.ini), interval.end ? new Date(interval.end) : undefined);
 			})));
