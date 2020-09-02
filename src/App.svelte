@@ -1,54 +1,22 @@
 <script lang="ts">
-	import Player from './components/Player.svelte';
-	import List from './components/List.svelte';
-	import Install from './components/Install.svelte';
-	import { Core } from './objects/Core.svelte';
+	import Player from './components/cpnPlayer.svelte';
+	import List from './components/cpnList.svelte';
+	import Install from './components/cpnInstall.svelte';
+	import { workList, workStarted } from './stores/strCore.svelte';
 
 	export let name: string;
-
-	const core = new Core();
-
-	let workList = core.workList;
-	let workStarted = core.workStarted;
-
-	function sinc() {
-		workList = core.workList;
-		workStarted = core.workStarted;
-	}
-
-	function newWork() {
-		core.newWork();
-		sinc();
-	}
-
-	function stopWork() {
-		core.stopWork();
-		sinc();
-	}
-
-	function startWork(e) {
-		core.startWork(e.detail.id);
-		sinc();
-	}
-
-	function delWork() {
-		core.delWork();
-		sinc();
-	}
 </script>
 
 <header class="-bg">
 	<h1>{name}</h1>
 	<div class="control">
-		<button class="-conc -active" on:click="{newWork}">+</button>
+		<button class="-conc -active" on:click="{workStarted.new}">+</button>
 	</div>
 </header>
-{#if workStarted}
-	<Player {workStarted} on:stop={stopWork} />
-{/if}
-<List {workList} on:start={startWork} />
+<Player />
+<List />
 <footer class="-bg">
-	<button class="-conc -active" on:click="{delWork}">X</button>
+	<button class="-conc -active" on:click="{workList.clear}">X</button>
 </footer>
 <Install />
 
