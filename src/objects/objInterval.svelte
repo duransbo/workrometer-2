@@ -32,5 +32,17 @@
 				'end': this.#end
 			};
 		}
+
+		get btw() {
+			const diff = (this.#end.getTime() - this.#ini.getTime()) / (1000 * 60 * 60 * 24);
+
+			const seg = (Math.floor(diff * 24 * 60 * 60) % 60);
+			const min = (Math.floor(diff * 24 * 60) % 60);
+			const hor = (Math.floor(diff * 24) % 24);
+			const dia =  Math.floor(diff);
+
+
+			return dia.toString().padStart(2, '0') + 'd ' + hor.toString().padStart(2, '0') + ':' + min.toString().padStart(2, '0');
+		}
 	}
 </script>

@@ -13,7 +13,9 @@
 		<button class="-conc -active" on:click="{workStarted.new}">+</button>
 	</div>
 </header>
-<Player />
+{#if $workStarted}
+	<Player />
+{/if}
 <List />
 <footer class="-bg">
 	<button class="-conc -active" on:click="{workList.clear}">X</button>

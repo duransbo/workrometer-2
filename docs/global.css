@@ -30,11 +30,20 @@ p {
 				inset -4px -4px 8px hsl(var(--hi), var(--si), calc(var(--li) + 10%));
 }
 
+.-conv {
+	--hi: var(--h);
+	--si: var(--s);
+	--li: var(--l);
+
+	background-color: hsl(var(--hi), var(--si), var(--li));
+	box-shadow: inset 4px 4px 8px hsl(var(--hi), var(--si), calc(var(--li) - 10%)),
+				inset -4px -4px 8px hsl(var(--hi), var(--si), calc(var(--li) + 10%));
+}
+
 .-conc {
 	--hi: var(--h);
 	--si: var(--s);
 	--li: var(--l);
-	--hi: var(--h);
 
 	background-image: linear-gradient(145deg,
 		hsl(var(--hi), var(--si), calc(var(--li) + 5%)),

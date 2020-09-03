@@ -1,9 +1,9 @@
 importScripts('polyfill.js');
 
-const CACHE_VERSION = "0.0.03";
+const CACHE_VERSION = "0.0.04";
 const CACHE_NAME = `static-workrometer-${CACHE_VERSION}`;
 
-const DATA_CACHE_VERSION = "0.0.02";
+const DATA_CACHE_VERSION = "0.0.03";
 const DATA_CACHE_NAME = `data-workrometer-${CACHE_VERSION}`;
 
 const CACHE_FILES = [

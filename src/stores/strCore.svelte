@@ -45,6 +45,7 @@
 				workStarted.stop();
 				
 				const work = new Work('New Work');
+				work.text += ' #' + work.id;
 				work.start();
 				set(work);
 				save();
